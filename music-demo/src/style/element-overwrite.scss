@@ -1,0 +1,140 @@
+// input
+$input-height: 30px;
+@mixin el-input-style($color, $bg-color, $placeholder-color) {
+    .el-input__inner {
+        height: $input-height !important;
+        line-height: $input-height !important;
+        background: var(--search-bg-color) !important;
+        border: none !important;
+        color: #{$color} !important;
+
+        &:hover {
+            border: none !important;
+        }
+    }
+    .el-input__prefix {
+        i {
+            line-height: $input-height + 1px !important;
+            color: #{$color} !important;
+            transition: none !important;
+        }
+    }
+
+    input::-webkit-input-placeholder {
+        color: #{$placeholder-color} !important;
+    }
+}
+
+.header, .el-dialog{
+    .el-input {
+        width:300px;
+        @include el-input-style(#b1b1b1,#4b4b4b,#BEBEBE);
+    }
+}
+
+
+//菜单
+.el-menu{
+    border-right: transparent;
+}
+.el-menu-item{
+    padding:0 90px;
+}
+
+//轮播图的按钮
+.el-carousel__arrow{
+    width:46px;
+    height:46px
+}
+.el-carousel__item{
+    height:260px;
+    border-radius: 4px;
+}
+
+//下一首，上一首
+.el-icon-caret-left,.el-icon-caret-right{
+    font-size: 26px;
+    color:#d33a31
+}
+
+//音量
+.el-slider__runway{
+    width:130px;
+    height:3px !important
+}
+.el-slider__button{
+    width:8px;
+    height:8px;
+    background-color: #d33a31;
+    border:1px solid #d33a31;
+    margin-top:-3px
+}
+.el-slider__bar{
+    height:3px;
+    background-color: #d33a31;
+}
+
+//顺序播放
+.el-tooltip__popper.is-dark{
+    color:#909399
+}
+
+//分页
+.el-pagination {
+    text-align: right;
+}
+.el-pager li{
+    background-color: var(--page-bg-color);
+    color:var(--page-font-color)
+}
+.el-pagination .btn-next,.el-pagination .btn-prev,.el-pagination button:disabled,.el-pager .more::before{
+    background: center center no-repeat var(--page-bg-color);
+    color:var(--page-font-color)
+}
+.el-pager li.active,.el-pager li:hover{
+    color:var(--comment-active-font-color)
+}
+
+//加载中
+.el-loading-spinner .path{
+    stroke:var(--comment-active-font-color);
+}
+.el-loading-spinner .el-loading-text{
+    color:var(--comment-active-font-color);
+    font-size: 16px;
+}
+
+//皮肤弹出框
+.el-popper[x-placement^=bottom]{
+    background: var(--prompt-bg-color) !important;
+    border:none;
+}
+.el-popper[x-placement^=bottom] .popper__arrow::after{
+    border-bottom-color:var(--prompt-bg-color)
+}
+.el-popper .popper__arrow::after{
+    border-color:var(--prompt-border-color)
+}
+.el-popper[x-placement^=bottom] .popper__arrow{
+    border-bottom-color:var(--prompt-bg-color)
+}
+
+//菜单
+.el-menu .el-menu-item{
+    background-color:var(--menu-bgcolor) ;
+
+    &:hover{
+        background-color: var(--menu-item-hover-bg);
+    }
+
+    &:active{
+        background-color: var(--menu-item-active-bg);
+    }
+}
+
+.el-menu{
+    background-color:var(--menu-bgcolor) ;
+    p{
+        background-color:var(--menu-bgcolor) ;
+    }
+}

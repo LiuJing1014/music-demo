@@ -1,0 +1,43 @@
+    .el-container{
+        background-color: var(--side-bg-color);
+    }
+    
+    .el-header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--header-bg-color);
+        color: #b1b1b1;
+        text-align: center;
+        line-height: 60px !important;
+        height:60px !important;
+        padding-right: 50px;
+        padding-left:0;
+        box-sizing: border-box;
+    }
+    
+    .el-aside {
+        background-color: var(--side-bg-color);
+        height:100%;
+        overflow-x: hidden;
+        overflow-y:auto
+    }
+    
+    .el-main {
+        background-color: var(--main-bg-color);
+        color: #333;
+        text-align: center;
+        overflow-y: auto;
+        padding:0 120px;
+    }
+
+    //轮播图
+    .el-carousel__item h3 {
+        opacity: 0.75;
+        line-height: 200px;
+        margin: 0;
+    }
+    .el-carousel__container{
+        z-index:1
+    }
